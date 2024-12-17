@@ -3,21 +3,58 @@
   padding-left: 2rem;
 }
 
+.shared-h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1rem;
+  padding-top: 1.5rem;
+}
+
 .shared-table {
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 16px;
   text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+}
+
+.shared-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.shared-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.shared-table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.shared-table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 .shared-table th,
 .shared-table td {
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 2px hidden rgb(70, 70, 70);
 }
 
 .shared-table th {
-  background-color: #f8f8f8;
+  background-color: #dacbfc;
   font-weight: bold;
+  font-family: "Departure";
+  font-size: 1.2rem;
+}
+
+.shared-table td {
+  font-family: "Supply";
+  font-size: 1.2rem;
+}
+
+.shared-table tr:nth-child(even) {
+  background-color: #efe6ff;
 }

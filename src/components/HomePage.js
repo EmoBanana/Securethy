@@ -69,7 +69,7 @@ function IpfsUpload() {
   const storeWalletAddresses = (cid, addresses, owner, fileName) => {
     const currentDate = new Date().toISOString();
     const data = {
-      addresses,
+      addresses: addresses.length > 0 ? addresses : ["Not Shared"], // Handle empty addresses
       date: currentDate,
       owner,
       fileName,
@@ -89,6 +89,11 @@ function IpfsUpload() {
   };
 
   const handleUpload = async () => {
+    if (!fileName.trim()) {
+      alert("Please provide a file name.");
+      return;
+    }
+
     if (file) {
       const formData = new FormData();
       formData.append("file", file);
@@ -110,7 +115,19 @@ function IpfsUpload() {
         const fileCID = response.data.IpfsHash;
         setCid(fileCID);
         console.log("Uploaded file CID:", fileCID);
-        storeWalletAddresses(fileCID, walletAddresses, walletAddress, fileName);
+
+        // Filter out empty wallet addresses
+        const validWalletAddresses = walletAddresses.filter(
+          (address) => address.trim() !== ""
+        );
+        storeWalletAddresses(
+          fileCID,
+          validWalletAddresses.length > 0
+            ? validWalletAddresses
+            : ["Not Shared"],
+          walletAddress,
+          fileName
+        );
       } catch (error) {
         console.error("Error uploading file:", error);
       }
@@ -195,7 +212,7 @@ function IpfsUpload() {
                           className="input-fields"
                           type="text"
                           value={address}
-                          placeholder="Wallet Address"
+                          placeholder="Wallet&nbsp; Address"
                           onChange={(e) =>
                             updateWalletAddress(index, e.target.value)
                           }

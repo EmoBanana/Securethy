@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useWallet } from './WalletContext';
+import { useWallet } from "./WalletContext";
 import "./Shared.css";
 import Nav from "./Nav";
 
@@ -36,44 +36,44 @@ function SharedFilesPage() {
 
   return (
     <>
-    <Nav/>
-    <div className="sharedpage">
-      <h1>Files Shared with Me</h1>
-      {sharedFiles.length === 0 ? (
-        <p>No files shared with this wallet address.</p>
-      ) : (
-        <table className="shared-table">
-          <thead>
-            <tr>
-              <th>File Name</th>
-              <th>CID</th>
-              <th>Date</th>
-              <th>Shared By</th>
-            </tr>
-          </thead>
-          <tbody>
-            {sharedFiles.map((file, index) => (
-              <tr key={index}>
-                <td>{file.fileName}</td>
-                <td>
-                  <a
-                    href={`https://gateway.pinata.cloud/ipfs/${file.cid}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onContextMenu={(e) => e.preventDefault()}
-                    onDragStart={(e) => e.preventDefault()}
-                  >
-                    {file.cid}
-                  </a>
-                </td>
-                <td>{file.date}</td>
-                <td>{file.sharedBy}</td>
+      <Nav />
+      <div className="sharedpage">
+        <h1 className="shared-h1">Files Shared with Me</h1>
+        {sharedFiles.length === 0 ? (
+          <p>No files shared with this wallet address.</p>
+        ) : (
+          <table className="shared-table">
+            <thead>
+              <tr>
+                <th>File Name</th>
+                <th>File CID</th>
+                <th>Date Uploaded</th>
+                <th>File Owner</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
+            </thead>
+            <tbody>
+              {sharedFiles.map((file, index) => (
+                <tr key={index}>
+                  <td>{file.fileName}</td>
+                  <td>
+                    <a
+                      href={`https://gateway.pinata.cloud/ipfs/${file.cid}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onContextMenu={(e) => e.preventDefault()}
+                      onDragStart={(e) => e.preventDefault()}
+                    >
+                      {file.cid}
+                    </a>
+                  </td>
+                  <td>{file.date}</td>
+                  <td>{file.sharedBy}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
     </>
   );
 }

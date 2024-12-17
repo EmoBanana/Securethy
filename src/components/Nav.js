@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useWallet } from './WalletContext';
-import './Nav.css';
+import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useWallet } from "./WalletContext";
+import "./Nav.css";
 
 function Nav() {
   const { walletAddress, setWalletAddress } = useWallet();
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,8 +15,10 @@ function Nav() {
 
   const disconnectWallet = () => {
     setWalletAddress(null);
-    navigate('/');
+    navigate("/");
   };
+
+  const currentPath = location.pathname;
 
   return (
     <nav className="navbar">
@@ -24,10 +27,18 @@ function Nav() {
           SECUR<span>ETH</span>Y
         </h1>
         <div className="nav-links">
-          <h1 className="nav-link" onClick={() => navigate("/uploaded")}>
+          <h1
+            className={`nav-link ${
+              currentPath === "/uploaded" ? "active" : ""
+            }`}
+            onClick={() => navigate("/uploaded")}
+          >
             Uploaded File
           </h1>
-          <h1 className="nav-link" onClick={() => navigate("/shared")}>
+          <h1
+            className={`nav-link ${currentPath === "/shared" ? "active" : ""}`}
+            onClick={() => navigate("/shared")}
+          >
             Shared File
           </h1>
         </div>
@@ -46,9 +57,9 @@ function Nav() {
           </div>
         )}
         {menuOpen && (
-            <div className="wallet-menu">
-              <button onClick={disconnectWallet}>Disconnect</button>
-            </div>
+          <div className="wallet-menu">
+            <button onClick={disconnectWallet}>Disconnect</button>
+          </div>
         )}
       </div>
     </nav>

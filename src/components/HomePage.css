@@ -86,7 +86,7 @@ body {
 
 .form-group input[type="text"],
 .wallet-group input[type="text"] {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Supply";
   font-size: 1rem;
   padding-left: 4px;
   margin-bottom: 4px;
@@ -129,7 +129,7 @@ input[readonly] {
 
 .remove-button {
   width: 1.42rem;
-  height: 1.7rem;
+  height: 1.5rem;
   margin-bottom: 0.23rem;
   font-family: "Departure";
   font-size: 0.8rem;
@@ -157,7 +157,7 @@ input[readonly] {
   font-size: 0.8rem;
   border: 2px solid black;
   border-radius: 3px;
-  padding: 0.2rem 0.4rem;
+  padding: 0.15rem 0.4rem;
   cursor: pointer;
   align-items: center;
 }
