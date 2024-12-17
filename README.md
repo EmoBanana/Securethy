@@ -31,3 +31,5 @@ Securethy ensures that once a file is uploaded, it remains verifiable and protec
 - **Premium Features**: Upcoming features include file encryption, audit trails, and guest access write permissions for advanced users.
 - **Subscription Models**: Offering both prepaid and postpaid subscription tiers for premium users.
 ---
+
+Made with ❤️
