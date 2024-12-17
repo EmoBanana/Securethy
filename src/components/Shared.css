@@ -3,6 +3,20 @@
   padding-left: 2rem;
 }
 
+.no-files {
+  text-align: center;
+}
+
+.blank-image {
+  width: 1000px;
+  height: auto;
+}
+
+.no-files h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+}
+
 .shared-h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 3rem;
@@ -57,4 +71,8 @@
 
 .shared-table tr:nth-child(even) {
   background-color: #efe6ff;
+}
+
+.popup-content {
+  align-items: center;
 }

@@ -44,7 +44,14 @@ function Shared() {
       <div className="sharedpage">
         <h1 className="shared-h1">Files Shared with Me</h1>
         {sharedFiles.length === 0 ? (
-          <p>No files shared with this wallet address.</p>
+          <div className="no-files">
+            <img
+              src="../NoFile.jpg"
+              alt="No files found"
+              className="blank-image"
+            />
+            <h1>No files shared with this wallet address.</h1>
+          </div>
         ) : (
           <table className="shared-table">
             <thead>
