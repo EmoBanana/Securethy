@@ -3,7 +3,7 @@ import axios from "axios";
 import "./HomePage.css";
 import Nav from "./Nav"; // Import the Nav component
 
-function IpfsUpload() {
+function Uploaded() {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("");
   const [cid, setCid] = useState("");
@@ -175,9 +175,13 @@ function IpfsUpload() {
                     <input
                       type="text"
                       value={address}
-                      onChange={(e) => updateWalletAddress(index, e.target.value)}
+                      onChange={(e) =>
+                        updateWalletAddress(index, e.target.value)
+                      }
                     />
-                    <button onClick={() => removeWalletAddress(index)}>-</button>
+                    <button onClick={() => removeWalletAddress(index)}>
+                      -
+                    </button>
                   </div>
                 ))}
                 <button onClick={addWalletAddress}>+</button>
@@ -194,4 +198,4 @@ function IpfsUpload() {
   );
 }
 
-export default IpfsUpload;
+export default Uploaded;

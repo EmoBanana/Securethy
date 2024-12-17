@@ -3,7 +3,7 @@ import { useWallet } from "./WalletContext";
 import "./Shared.css";
 import Nav from "./Nav";
 
-function SharedFilesPage() {
+function Shared() {
   const { walletAddress } = useWallet();
   const [sharedFiles, setSharedFiles] = useState([]);
   const currentWallet = walletAddress;
@@ -78,4 +78,4 @@ function SharedFilesPage() {
   );
 }
 
-export default SharedFilesPage;
+export default Shared;

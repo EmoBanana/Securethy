@@ -53,7 +53,9 @@ function Nav() {
           </div>
         ) : (
           <div className="wallet-info">
-            <span className="wallet-address">Connect Wallet</span>
+            <span className="wallet-address" onClick={disconnectWallet}>
+              Connect Wallet
+            </span>
           </div>
         )}
         {menuOpen && (
