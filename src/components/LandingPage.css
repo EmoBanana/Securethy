@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Supply";
+    src: url("../SupplySans.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("../Futura.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Departure";
+    src: url("../Departure.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.centered-content {
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.site-title {
+    font-family: "Futura";
+    font-size: 12rem;
+    color: white;
+    margin: 0;
+    line-height: 17rem;
+    position: relative;
+}
+
+.eth-highlight {
+    color: #c0a3ff;
+}
+
+.tagline {
+    font-family: "Supply";
+    font-size: 2rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.tagline span {
+    color: #c0a3ff;
+}
+
+.connect-wallet-button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: 4px 4px 0px rgb(107, 107, 107);
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.5s ease;
+}
+
+.connect-button {
+    border: 2px solid black;
+    border-radius: 0.375rem;
+    box-shadow: 4px 4px 0px black;
+    background-color: #f1e7d3;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    margin-left: 0.4rem;
+    font-size: 1.2rem;
+    font-family: "Lazydog";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.connect-wallet-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #5f5858;
+    transition: 0.4s;
+}
+
+.wallet-address {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: lightgreen;
+}
+
+.error-message {
+    margin-top: 20px;
+    color: red;
+}

@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.whitespace {
+  padding: 3.6rem 0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 1000;
+}
+
+.popup-content {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6rem;
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  padding-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-height: 50%;
+  max-width: 480px;
+  width: 90%;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.popup-content h2 {
+  font-weight: 100;
+}
+
+.popup-content h3 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.change-file {
+  display: flex;
+  padding-left: 4.5rem;
+  align-items: center;
+}
+
+.change-file h2 {
+  text-align: left;
+}
+
+.change-file button {
+  margin-top: 1.4rem;
+  margin-left: 2.2rem;
+  font-family: "Departure";
+  text-wrap: nowrap;
+}
+
+.form-group {
+  display: flex;
+  padding-left: 4.5rem;
+}
+
+.form-group label,
+.wallet-group label {
+  font-size: 1.3rem;
+  text-align: left;
+  display: inline-block;
+  width: 140px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.form-group input[type="text"],
+.wallet-group input[type="text"] {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  padding-left: 4px;
+  margin-bottom: 4px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+input[readonly] {
+  background-color: #f5f5f5;
+  opacity: 0.9;
+  cursor: not-allowed;
+  color: #888;
+}
+
+.wallet-group {
+  display: flex;
+  flex-direction: row;
+  padding-left: 4.5rem;
+}
+
+.wallet-address-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.input-fields {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-right: none;
+}
+
+.remove-button {
+  width: 1.42rem;
+  height: 1.7rem;
+  margin-bottom: 0.23rem;
+  font-family: "Departure";
+  font-size: 0.8rem;
+  border: 2px solid black;
+  border-left: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-button:hover {
+  background-color: #dadada;
+}
+
+.add-button {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 0.4rem;
+  padding-bottom: 0.7rem;
+}
+
+.add-button button {
+  font-family: "Departure";
+  font-size: 0.8rem;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.add-button button:hover {
+  background-color: #dadada;
+}
+
+.popup-actions button {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-family: "Departure";
+  text-wrap: nowrap;
+}
+
+.file-upload {
+  text-align: center;
+  padding: 200px;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  border: 5px dashed rgb(175, 175, 175);
+  border-radius: 8px;
+  background-color: rgb(240, 240, 240);
+  transition: background-color 0.3s ease;
+}
+
+.file-upload h1,
+.file-upload p,
+.custom-file-button {
+  font-family: "Departure";
+}
+
+.file-upload h1 {
+  font-size: 2.4rem;
+}
+
+.file-upload p {
+  font-size: 1.2rem;
+}
+
+.file-upload.dragging {
+  background-color: lightgray;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.upload-section {
+  margin-bottom: 30px;
+}
+
+.custom-file-button {
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.custom-file-button:hover {
+  background-color: #0056b3;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-name {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}

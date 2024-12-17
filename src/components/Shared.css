@@ -1,0 +1,23 @@
+.sharedpage {
+  padding-top: 4rem;
+  padding-left: 2rem;
+}
+
+.shared-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.shared-table th,
+.shared-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.shared-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
