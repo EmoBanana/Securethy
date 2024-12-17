@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { WalletProvider } from './components/WalletContext';
-import LandingPage from './components/LandingPage';
-import HomePage from './components/HomePage';
-import Uploaded from './components/Uploaded';
-import Shared from './components/Shared';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { WalletProvider } from "./components/WalletContext";
+import LandingPage from "./components/LandingPage";
+import HomePage from "./components/HomePage";
+import Uploaded from "./components/Uploaded";
+import Shared from "./components/Shared";
 
 function App() {
   return (

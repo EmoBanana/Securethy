@@ -4,7 +4,7 @@ import axios from "axios";
 import "./HomePage.css";
 import Nav from "./Nav";
 
-function IpfsUpload() {
+function Home() {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("");
   const [cid, setCid] = useState("");
@@ -243,4 +243,4 @@ function IpfsUpload() {
   );
 }
 
-export default IpfsUpload;
+export default Home;

@@ -12,22 +12,26 @@ function Shared() {
     const files = [];
     for (let key in localStorage) {
       if (localStorage.hasOwnProperty(key)) {
-        const fileData = JSON.parse(localStorage.getItem(key));
+        try {
+          const fileData = JSON.parse(localStorage.getItem(key));
 
-        if (
-          fileData &&
-          Array.isArray(fileData.addresses) &&
-          fileData.addresses.includes(currentWallet)
-        ) {
-          const dateOnly = fileData.date
-            ? new Date(fileData.date).toISOString().split("T")[0]
-            : "Unknown";
-          files.push({
-            fileName: fileData.fileName || "Unknown",
-            cid: key,
-            date: dateOnly,
-            sharedBy: fileData.owner || "Unknown",
-          });
+          if (
+            fileData &&
+            Array.isArray(fileData.addresses) &&
+            fileData.addresses.includes(currentWallet)
+          ) {
+            const dateOnly = fileData.date
+              ? new Date(fileData.date).toISOString().split("T")[0]
+              : "Unknown";
+            files.push({
+              fileName: fileData.fileName || "Unknown",
+              cid: key,
+              date: dateOnly,
+              sharedBy: fileData.owner || "Unknown",
+            });
+          }
+        } catch (e) {
+          console.error(`Error parsing localStorage item with key ${key}:`, e);
         }
       }
     }
