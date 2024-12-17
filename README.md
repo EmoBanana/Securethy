@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Securethy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Store with ease, Share in peace**
 
-## Available Scripts
+Securethy is a blockchain-based data-sharing platform that provides a secure and user-friendly solution for file authentication and sharing. By utilizing blockchain technology, Securethy ensures the integrity, transparency, and security of all files shared through the platform.
 
-In the project directory, you can run:
+## The Problem Securethy Solves
 
-### `npm start`
+### 1. Mitigate Phishing Risk
+Traditional file-sharing systems are vulnerable to phishing attacks, where unauthorized users may attempt to gain access to sensitive data. Securethy tackles this issue by authenticating files with a unique Content Identifier (CID) and enabling wallet-based user verification. Only verified users with a connected wallet can access shared files, eliminating the risk of phishing attacks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Tamper-Proof File Sharing
+Securethy ensures that once a file is uploaded, it remains verifiable and protected from tampering. Any modification to the file results in a new CID, allowing for complete transparency and traceability of file ownership and updates. With immutable blockchain records, Securethy guarantees that files are secure and their history is preserved, providing a tamper-proof solution for sensitive data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Key Features
 
-### `npm test`
+- **Wallet-Based Authentication**: Files are accessible only to users who authenticate via MetaMask or similar wallet solutions.
+- **Immutable Records**: Each file and its updates are logged on the blockchain, preventing unauthorized changes.
+- **Unique Content Identifiers (CIDs)**: Each file is assigned a CID to verify its authenticity and prevent tampering.
+- **Seamless File Sharing**: Securely share files with other users by providing access through their wallet addresses.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+1. **Connect your Wallet**: Use MetaMask or a compatible wallet to log in.
+2. **Upload Files**: Files are hashed and stored using IPFS, with blockchain ensuring file authenticity.
+3. **Secure Sharing**: Share files securely via wallet addresses, ensuring only verified users can access the data.
+4. **Track Changes**: Each file update generates a new CID, providing a traceable history of the file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Roadmap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Premium Features**: Upcoming features include file encryption, audit trails, and guest access write permissions for advanced users.
+- **Subscription Models**: Offering both prepaid and postpaid subscription tiers for premium users.
+---
